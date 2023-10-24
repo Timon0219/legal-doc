@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.remove-arrow::-webkit-outer-spin-button,
+.remove-arrow::-webkit-inner-spin-button {
+  appearance: unset;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.remove-arrow[type="number"] {
+  appearance: unset;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidebar-holder {
+  width: 100%;
+  min-width: 240px;
+  max-width: 240px;
+  position: relative;
+  background: #151515;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.3s;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.open-nav {
+  min-width: 0px !important;
+  max-width: 0px !important;
+  width: 0 !important;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.sidebar-list ul li a {
+  padding: 10px;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s ease-in;
+  text-transform: capitalize;
+}
+
+.sidebar-list ul li a:hover {
+  color: #151515;
+  background: white;
+}
+
+.page-header {
+  width: 100%;
+  padding: 20px;
+  background: white;
+}
+.page-header span {
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+}
+
+.center-svg {
+  aspect-ratio: 1/1;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2em !important;
+}
+
+.uppy-Dashboard-inner {
+  width: 100% !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+.tableBtn{
+  background-color: #151515 !important;
+} */
+
+@media screen and (max-width: 767px) {
+  .sidebar-holder {
+    width: 100%;
+    min-width: 200px;
+    max-width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .page-header span {
+    margin-left: auto;
+  }
+}
